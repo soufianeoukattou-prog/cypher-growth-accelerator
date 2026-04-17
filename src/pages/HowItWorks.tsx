@@ -58,20 +58,22 @@ const HowItWorks = () => {
   return (
     <>
       {/* HEADER */}
-      <section className="container-edge pt-24 pb-16 lg:pt-32 lg:pb-20 grid lg:grid-cols-12 gap-10 items-end">
-        <div className="lg:col-span-7">
-          <p className="font-mono text-xs uppercase tracking-[0.25em] text-accent mb-6">
-            ◆ How It Works
-          </p>
-          <h1 className="font-serif text-5xl md:text-6xl xl:text-7xl leading-[1.05] text-balance">
-            Three engagements. One outcome: a system you actually run.
-          </h1>
-        </div>
-        <div className="lg:col-span-5 lg:pl-10 border-l border-border">
-          <p className="font-mono text-sm text-muted-foreground leading-relaxed pl-6 lg:pl-10">
-            We don't sell strategy decks. Every engagement ends with assets your team can run on Monday morning — written offers,
-            scripts, and a working pipeline.
-          </p>
+      <section className="bg-primary text-primary-foreground">
+        <div className="container-edge pt-24 pb-20 lg:pt-32 lg:pb-24 grid lg:grid-cols-12 gap-10 items-end">
+          <div className="lg:col-span-7">
+            <p className="font-mono text-xs uppercase tracking-[0.25em] text-accent mb-6">
+              ◆ How It Works
+            </p>
+            <h1 className="font-serif text-5xl md:text-6xl xl:text-7xl leading-[1.05] text-balance text-white">
+              Three engagements. One outcome: a growth system you actually run.
+            </h1>
+          </div>
+          <div className="lg:col-span-5 lg:pl-10 border-l border-white/15">
+            <p className="font-mono text-sm text-white/70 leading-relaxed pl-6 lg:pl-10">
+              Cypherdigi doesn't sell strategy decks. Every engagement ends with assets your team can run on Monday morning —
+              written offers, scripts, and a working pipeline.
+            </p>
+          </div>
         </div>
       </section>
 
