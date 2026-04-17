@@ -127,25 +127,24 @@ const HowItWorks = () => {
       </section>
 
       {/* TIMELINE */}
-      <section className="py-24 border-t border-border">
+      <section className="py-24 bg-secondary border-t border-border">
         <div className="container-edge">
           <Reveal>
             <p className="font-mono text-xs uppercase tracking-[0.25em] text-accent mb-6">
               ◆ Six-Week Delivery
             </p>
-            <h2 className="font-serif text-4xl md:text-5xl leading-tight max-w-3xl text-balance">
+            <h2 className="font-serif text-4xl md:text-5xl leading-tight max-w-3xl text-balance text-primary">
               Built, documented, and handed off in six weeks.
             </h2>
           </Reveal>
         </div>
 
-        {/* desktop horizontal scroll, mobile stack */}
         <div className="mt-14 overflow-x-auto lg:overflow-visible">
           <div className="container-edge">
             <div className="flex flex-col lg:grid lg:grid-cols-6 gap-4 min-w-max lg:min-w-0">
               {weeks.map((w, i) => (
                 <Reveal key={w.n} delay={i * 0.06}>
-                  <div className="relative bg-secondary p-6 min-h-[220px] w-[260px] lg:w-auto overflow-hidden hover-lift">
+                  <div className="relative bg-background border border-border p-6 min-h-[220px] w-[260px] lg:w-auto overflow-hidden hover-lift">
                     <div
                       aria-hidden
                       className="absolute -bottom-6 -right-2 font-serif text-primary/10 leading-none select-none"
