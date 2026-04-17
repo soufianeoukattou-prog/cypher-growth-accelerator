@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { Reveal } from "@/components/Reveal";
 import { Check, X } from "lucide-react";
+import soufiane from "@/assets/founder-soufiane.jpg";
+import omar from "@/assets/founder-omar.jpg";
 
 const fitFor = [
   "B2B SaaS founders doing $20k–$200k MRR",
@@ -16,25 +18,77 @@ const notFor = [
   "Teams unwilling to change pricing or positioning",
 ];
 
+const founders = [
+  {
+    name: "Soufiane",
+    role: "Co-founder · Offer & Pricing",
+    image: soufiane,
+    bio: "Spent 6 years inside B2B SaaS sales orgs before building Cypherdigi. Obsessed with offer architecture and pricing math.",
+  },
+  {
+    name: "Omar",
+    role: "Co-founder · Lead Systems",
+    image: omar,
+    bio: "Engineer-turned-operator. Builds the outbound, content and pipeline systems that make growth predictable.",
+  },
+];
+
 const About = () => {
   return (
     <>
       {/* HERO */}
-      <section className="container-edge pt-24 pb-16 lg:pt-32 lg:pb-24 grid lg:grid-cols-12 gap-10">
-        <div className="lg:col-span-2">
-          <p
-            className="vertical-text font-mono text-xs uppercase tracking-[0.3em] text-muted-foreground"
-          >
-            About / 02
-          </p>
-        </div>
-        <div className="lg:col-span-10">
+      <section className="bg-primary text-primary-foreground">
+        <div className="container-edge pt-24 pb-20 lg:pt-32 lg:pb-28">
           <p className="font-mono text-xs uppercase tracking-[0.25em] text-accent mb-6">
             ◆ Who We Are
           </p>
-          <h1 className="font-serif text-5xl md:text-6xl xl:text-7xl leading-[1.05] text-balance max-w-5xl">
-            We are a two-person implementation team obsessed with one thing: making Hormozi's frameworks actually work inside SaaS businesses.
+          <h1 className="font-serif text-5xl md:text-6xl xl:text-7xl leading-[1.05] text-balance max-w-5xl text-white">
+            We're a two-person team that builds growth systems for SaaS founders — not slide decks.
           </h1>
+          <p className="mt-8 font-mono text-base text-white/70 max-w-2xl leading-relaxed">
+            Cypherdigi exists because most "growth consultants" hand you theory and disappear.
+            We do the work with you and leave behind a system your team can actually run.
+          </p>
+        </div>
+      </section>
+
+      {/* FOUNDERS */}
+      <section className="container-edge py-24 lg:py-32">
+        <Reveal>
+          <p className="font-mono text-xs uppercase tracking-[0.25em] text-accent mb-6">
+            ◆ The Founders
+          </p>
+          <h2 className="font-serif text-4xl md:text-5xl leading-tight max-w-3xl text-balance mb-16">
+            Two operators. One playbook. Five clients per month, max.
+          </h2>
+        </Reveal>
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+          {founders.map((f, i) => (
+            <Reveal key={f.name} delay={i * 0.12}>
+              <article className="group">
+                <div className="relative aspect-[4/5] overflow-hidden bg-secondary">
+                  <img
+                    src={f.image}
+                    alt={`${f.name}, ${f.role}`}
+                    width={768}
+                    height={960}
+                    loading="lazy"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/0 to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                    <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">
+                      {f.role}
+                    </div>
+                    <h3 className="mt-2 font-serif text-4xl">{f.name}</h3>
+                  </div>
+                </div>
+                <p className="mt-6 font-mono text-sm text-muted-foreground leading-relaxed">
+                  {f.bio}
+                </p>
+              </article>
+            </Reveal>
+          ))}
         </div>
       </section>
 
@@ -54,7 +108,7 @@ const About = () => {
           </Reveal>
           <Reveal delay={0.1}>
             <p>
-              We don't do decks. Every engagement ends with three things in your hands:
+              We don't do decks. Every Cypherdigi engagement ends with three things in your hands:
               a written offer your salespeople can read on a call, a documented lead system that runs without us,
               and a pricing model engineered around your actual unit economics.
             </p>
@@ -71,10 +125,10 @@ const About = () => {
       {/* GUARANTEE */}
       <section className="bg-primary text-primary-foreground py-24">
         <div className="container-edge grid lg:grid-cols-12 gap-10 items-center">
-          <p className="lg:col-span-3 font-mono text-xs uppercase tracking-[0.3em] text-white/50">
+          <p className="lg:col-span-3 font-mono text-xs uppercase tracking-[0.3em] text-accent">
             ◆ The Guarantee
           </p>
-          <p className="lg:col-span-9 font-serif text-3xl md:text-5xl leading-tight text-balance">
+          <p className="lg:col-span-9 font-serif text-3xl md:text-5xl leading-tight text-balance text-white">
             If you don't feel the new positioning is dramatically stronger,
             <span className="text-accent"> we refund you. </span>
             Full stop.
@@ -85,14 +139,14 @@ const About = () => {
       {/* FIT / NOT FIT */}
       <section className="container-edge py-24 grid lg:grid-cols-2 gap-10 lg:gap-16">
         <Reveal>
-          <p className="font-mono text-xs uppercase tracking-[0.25em] text-success mb-6">
+          <p className="font-mono text-xs uppercase tracking-[0.25em] text-accent mb-6">
             ◆ Who this is for
           </p>
           <h2 className="font-serif text-3xl md:text-4xl mb-8">If this sounds like you, we should talk.</h2>
           <ul className="space-y-4">
             {fitFor.map((f) => (
               <li key={f} className="flex gap-4 border-t border-border pt-4">
-                <Check className="text-success shrink-0 mt-0.5" size={18} />
+                <Check className="text-accent shrink-0 mt-0.5" size={18} />
                 <span className="font-mono text-sm text-foreground">{f}</span>
               </li>
             ))}
@@ -125,7 +179,7 @@ const About = () => {
         <Reveal delay={0.1}>
           <Link
             to="/scorecard"
-            className="mt-10 inline-flex items-center px-8 py-4 bg-primary text-primary-foreground text-xs font-mono uppercase tracking-[0.2em] hover:bg-accent transition-colors"
+            className="mt-10 inline-flex items-center px-8 py-4 bg-accent text-accent-foreground text-xs font-mono uppercase tracking-[0.2em] hover:bg-primary hover:text-primary-foreground transition-colors"
           >
             Take the Free Scorecard →
           </Link>

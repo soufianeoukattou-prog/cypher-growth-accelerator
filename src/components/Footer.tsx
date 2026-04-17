@@ -11,10 +11,10 @@ export const Footer = () => {
             <span className="font-serif text-lg tracking-tight">CYPHERDIGI</span>
           </div>
           <p className="font-serif text-2xl leading-snug max-w-md text-balance">
-            Hormozi frameworks, engineered for SaaS.
+            Growth systems engineered for SaaS founders.
           </p>
           <p className="mt-4 text-xs font-mono uppercase tracking-[0.2em] opacity-60">
-            EST. 2024 / IMPLEMENTATION PARTNER
+            EST. 2024 / GROWTH PARTNER
           </p>
         </div>
 
@@ -40,7 +40,7 @@ export const Footer = () => {
       <div className="border-t border-white/10">
         <div className="container-edge py-5 flex flex-col md:flex-row items-start md:items-center justify-between gap-2 text-xs font-mono uppercase tracking-widest opacity-60">
           <span>© {new Date().getFullYear()} Cypherdigi</span>
-          <span>Hormozi Implementation Partner</span>
+          <span>Growth systems for SaaS</span>
         </div>
       </div>
     </footer>
