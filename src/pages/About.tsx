@@ -170,20 +170,22 @@ const About = () => {
       </section>
 
       {/* CTA */}
-      <section className="container-edge py-24 text-center">
-        <Reveal>
-          <h2 className="font-serif text-4xl md:text-6xl leading-[1.05] max-w-3xl mx-auto text-balance">
-            Still reading? Take the scorecard.
-          </h2>
-        </Reveal>
-        <Reveal delay={0.1}>
-          <Link
-            to="/scorecard"
-            className="mt-10 inline-flex items-center px-8 py-4 bg-accent text-accent-foreground text-xs font-mono uppercase tracking-[0.2em] hover:bg-primary hover:text-primary-foreground transition-colors"
-          >
-            Take the Free Scorecard →
-          </Link>
-        </Reveal>
+      <section className="bg-secondary py-24 text-center border-t border-border">
+        <div className="container-edge">
+          <Reveal>
+            <h2 className="font-serif text-4xl md:text-6xl leading-[1.05] max-w-3xl mx-auto text-balance text-primary">
+              Still reading? Take the scorecard.
+            </h2>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <Link
+              to="/scorecard"
+              className="mt-10 inline-flex items-center px-8 py-4 bg-primary text-primary-foreground text-xs font-mono uppercase tracking-[0.2em] hover:bg-accent transition-colors"
+            >
+              Take the Free Scorecard →
+            </Link>
+          </Reveal>
+        </div>
       </section>
     </>
   );
