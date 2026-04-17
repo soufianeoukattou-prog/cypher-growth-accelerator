@@ -49,15 +49,74 @@ const steps = [
 const Index = () => {
   return (
     <>
-      {/* HERO — white bg, image LEFT, text RIGHT */}
+      {/* HERO — white bg, text LEFT, image RIGHT */}
       <section className="relative bg-background text-foreground overflow-hidden border-b border-border">
-        <div className="container-edge grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 pt-20 pb-20 lg:pt-24 lg:pb-28 items-center">
-          {/* Left image column */}
+        <div className="container-edge grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 pt-16 pb-20 lg:pt-20 lg:pb-24 items-center">
+          {/* Left text column */}
+          <div className="lg:col-span-7 order-2 lg:order-1">
+            <Reveal>
+              <p className="font-mono text-xs uppercase tracking-[0.25em] text-accent mb-6">
+                ◆ Cypherdigi / Growth Partner for SaaS
+              </p>
+            </Reveal>
+
+            <Reveal delay={0.1}>
+              <h1 className="font-serif text-5xl md:text-6xl xl:text-[88px] leading-[0.95] tracking-tight text-primary text-balance">
+                Stop selling features.<br />
+                <span className="text-accent">Start closing premium deals.</span>
+              </h1>
+            </Reveal>
+
+            <StaggerLines
+              lines={["More clients.", "Higher prices.", "Predictable leads."]}
+              className="mt-8 font-serif text-2xl md:text-3xl leading-tight text-foreground/80"
+            />
+
+            <Reveal delay={0.5} className="mt-8 max-w-xl">
+              <p className="font-mono text-base text-muted-foreground leading-relaxed">
+                Cypherdigi rebuilds your offer, pricing and lead system so SaaS founders stop competing on features
+                and start closing premium deals — on repeat.
+              </p>
+            </Reveal>
+
+            <Reveal delay={0.6} className="mt-10 flex flex-col sm:flex-row gap-4 sm:items-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center px-7 py-4 bg-primary text-primary-foreground text-xs font-mono uppercase tracking-[0.2em] hover:bg-accent transition-colors"
+              >
+                Build My Growth System
+              </Link>
+              <Link
+                to="/scorecard"
+                className="group inline-flex items-center gap-2 text-sm font-mono uppercase tracking-[0.2em] text-foreground"
+              >
+                <span className="border-b border-foreground/60 pb-0.5">Take the Free Scorecard</span>
+                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </Reveal>
+
+            <Reveal delay={0.75} className="mt-12 grid grid-cols-3 gap-6 max-w-xl border-t border-border pt-6">
+              <div>
+                <div className="font-serif text-3xl text-primary">+47%</div>
+                <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground mt-1">avg close rate lift</div>
+              </div>
+              <div>
+                <div className="font-serif text-3xl text-primary">2.3x</div>
+                <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground mt-1">avg price increase</div>
+              </div>
+              <div>
+                <div className="font-serif text-3xl text-primary">6 wk</div>
+                <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground mt-1">to a running system</div>
+              </div>
+            </Reveal>
+          </div>
+
+          {/* Right image column */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-            className="lg:col-span-5 relative order-2 lg:order-1"
+            className="lg:col-span-5 relative order-1 lg:order-2"
           >
             <div className="relative aspect-[4/5] overflow-hidden">
               <img
@@ -74,58 +133,6 @@ const Index = () => {
               </div>
             </div>
           </motion.div>
-
-          {/* Right text column */}
-          <div className="lg:col-span-7 order-1 lg:order-2">
-            <Reveal>
-              <p className="font-mono text-xs uppercase tracking-[0.25em] text-accent mb-8">
-                ◆ Cypherdigi / Growth Partner for SaaS
-              </p>
-            </Reveal>
-
-            <StaggerLines
-              lines={["More clients.", "Higher prices.", "Predictable leads."]}
-              className="font-serif text-5xl md:text-6xl xl:text-7xl leading-[1.02] tracking-tight text-primary"
-            />
-
-            <Reveal delay={0.4} className="mt-8 max-w-xl">
-              <p className="font-mono text-base text-muted-foreground leading-relaxed">
-                Cypherdigi rebuilds your offer, pricing and lead system so SaaS founders stop competing on features
-                and start closing premium deals — on repeat.
-              </p>
-            </Reveal>
-
-            <Reveal delay={0.55} className="mt-10 flex flex-col sm:flex-row gap-4 sm:items-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center justify-center px-7 py-4 bg-primary text-primary-foreground text-xs font-mono uppercase tracking-[0.2em] hover:bg-accent transition-colors"
-              >
-                Build My Growth System
-              </Link>
-              <Link
-                to="/scorecard"
-                className="group inline-flex items-center gap-2 text-sm font-mono uppercase tracking-[0.2em] text-foreground"
-              >
-                <span className="border-b border-foreground/60 pb-0.5">Take the Free Scorecard</span>
-                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </Reveal>
-
-            <Reveal delay={0.7} className="mt-14 grid grid-cols-3 gap-6 max-w-xl border-t border-border pt-6">
-              <div>
-                <div className="font-serif text-3xl text-primary">+47%</div>
-                <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground mt-1">avg close rate lift</div>
-              </div>
-              <div>
-                <div className="font-serif text-3xl text-primary">2.3x</div>
-                <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground mt-1">avg price increase</div>
-              </div>
-              <div>
-                <div className="font-serif text-3xl text-primary">6 wk</div>
-                <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground mt-1">to a running system</div>
-              </div>
-            </Reveal>
-          </div>
         </div>
       </section>
 
