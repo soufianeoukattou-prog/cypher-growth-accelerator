@@ -67,11 +67,6 @@ const Index = () => {
               </h1>
             </Reveal>
 
-            <StaggerLines
-              lines={["More clients.", "Higher prices.", "Predictable leads."]}
-              className="mt-8 font-serif text-2xl md:text-3xl leading-tight text-foreground/80"
-            />
-
             <Reveal delay={0.5} className="mt-8 max-w-xl">
               <p className="font-mono text-base text-muted-foreground leading-relaxed">
                 Cypherdigi rebuilds your offer, pricing and lead system so SaaS founders stop competing on features
